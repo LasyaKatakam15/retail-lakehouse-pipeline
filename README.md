@@ -9,7 +9,7 @@ Raw transactional data stored in **Amazon S3** is ingested, cleaned, and transfo
 ---
 
 ## 🏗 Architecture
-
+'''
 S3 (Raw Data Source)
 ↓
 Bronze Layer (Raw Ingestion - Databricks PySpark)
@@ -17,7 +17,7 @@ Bronze Layer (Raw Ingestion - Databricks PySpark)
 Silver Layer (Cleaned & Transformed - PySpark)
 ↓
 Gold Layer (KPIs, Dimensions, Data Marts - Delta)
-
+'''
 ---
 
 ## ⚙️ Tech Stack
@@ -103,7 +103,7 @@ Analytics-ready datasets designed for reporting and business insights:
 ---
 
 ## 📁 Project Structure
-
+'''
 retail-lakehouse-pipeline/
 │
 ├── databricks/
@@ -121,7 +121,7 @@ retail-lakehouse-pipeline/
 │
 ├── .gitignore
 └── README.md
-
+'''
 ---
 
 ## 🚀 How to Run
