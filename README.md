@@ -1,4 +1,4 @@
-# 📦 Retail Data Lakehouse Pipeline
+# Retail Data Lakehouse Pipeline
 
 ## 📖 Overview
 
@@ -8,8 +8,9 @@ Raw transactional data stored in **Amazon S3** is ingested, cleaned, and transfo
 
 ---
 
-## 🏗 Architecture
+## Architecture
 
+```
 S3 (Raw Data Source)
 ↓
 Bronze Layer (Raw Ingestion - Databricks PySpark)
@@ -17,10 +18,11 @@ Bronze Layer (Raw Ingestion - Databricks PySpark)
 Silver Layer (Cleaned & Transformed - PySpark)
 ↓
 Gold Layer (KPIs, Dimensions, Data Marts - Delta)
+```
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 - **PySpark (Databricks)** – Distributed data processing & transformations
 - **Delta Lake** – Storage layer with ACID guarantees
@@ -31,9 +33,9 @@ Gold Layer (KPIs, Dimensions, Data Marts - Delta)
 
 ---
 
-## 🔄 Data Pipeline
+## Data Pipeline
 
-### 🥉 Bronze Layer
+### Bronze Layer
 
 - Raw CSV files ingested from S3
 - Data loaded using **boto3 with environment-based AWS credential management**
@@ -46,7 +48,7 @@ Gold Layer (KPIs, Dimensions, Data Marts - Delta)
 
 ---
 
-### 🥈 Silver Layer
+### Silver Layer
 
 - Data cleaning and standardization
 - Column name normalization
@@ -56,7 +58,7 @@ Gold Layer (KPIs, Dimensions, Data Marts - Delta)
 
 ---
 
-### 🥇 Gold Layer
+### Gold Layer
 
 Analytics-ready datasets designed for reporting and business insights:
 
@@ -80,7 +82,7 @@ Analytics-ready datasets designed for reporting and business insights:
 
 ---
 
-## ⭐ Key Features
+## Key Features
 
 - Layered **Lakehouse architecture** (Bronze → Silver → Gold)
 - Scalable **PySpark-based ETL pipeline**
@@ -92,7 +94,7 @@ Analytics-ready datasets designed for reporting and business insights:
 
 ---
 
-## 💡 Design Decisions
+## Design Decisions
 
 - Designed a clear separation between **data storage (S3)** and **data processing (Databricks)**
 - Implemented a **layered Lakehouse architecture** using Delta tables for reliability and scalability
@@ -102,8 +104,9 @@ Analytics-ready datasets designed for reporting and business insights:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
+```
 retail-lakehouse-pipeline/
 │
 ├── databricks/
@@ -121,10 +124,11 @@ retail-lakehouse-pipeline/
 │
 ├── .gitignore
 └── README.md
+```
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### 1. Databricks
 
@@ -136,7 +140,7 @@ Run scripts in order:
 
 ---
 
-## 📊 Use Cases
+## Use Cases
 
 - Retail sales analysis
 - Customer behavior insights
@@ -145,7 +149,7 @@ Run scripts in order:
 
 ---
 
-## 🔮 Future Improvements
+## Future Improvements
 
 - Add orchestration (**Databricks Workflows / Airflow**)
 - Add **CI/CD pipeline integration**
@@ -154,6 +158,6 @@ Run scripts in order:
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Lasya Katakam**
